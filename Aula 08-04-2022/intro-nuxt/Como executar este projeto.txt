@@ -1,0 +1,4 @@
+nstalar módulos com:
+	npm install
+executar o server Nuxt.js com:
+	npm run dev

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <template  id="filmes">
+        <div>
+            <ul><li>{{title}}</li><li>{{description}}</li></ul>
+        </div>
+    </template>
+
+    <template  id="hello">
+        <h2>{{usuario}}</h2>
+    </template>
+    
+    <div id="app">    
+        <!-- Diretiva v-model -->
+        <input type="text" v-model="title">
+        <meu-componente></meu-componente>
+        <!-- Diretiva v-bind -->
+        <img v-bind:src = "imggato" alt="" style="width: 20%;display: block;margin: 20px;">
+        <!-- Diretiva v-on -->
+        <button v-on:click = "digaOi">Diga Oi</button>        
+        <!-- <button @click = "digaOi">Diga Oi</button> -->
+        <!-- Diretiva v-if -->
+        <h1 v-if="tanahora">Almoçar</h1>
+        <h1 v-else>Descansar</h1>
+        <!-- Diretiva v-for -->
+        <ul>
+            <li v-for = "item in items">
+                {{item.msg}}
+            </li>
+        </ul>
+        <!-- Diretiva v-for com componentes -->
+        <hello-componente v-for="item in items" v-bind:usuario = "item.msg">
+        </hello-componente>
+    </div>
+</body>
+<script src="https://unpkg.com/vue@3"></script>
+<script src="script.js"></script>
+</html>

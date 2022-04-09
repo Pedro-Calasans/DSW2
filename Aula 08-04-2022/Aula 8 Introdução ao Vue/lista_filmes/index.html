@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Filmes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <template id="filme">
+        <div>
+            <div class="input-movie">
+                <label>Novo título</label> <input v-model = "titulo" type="text"> <br>
+                <label>Nova descrição</label> <input v-model = "descricao" type="text"> <br>
+                <button v-on:click="addToList">Adicionar</button>
+            </div>
+            
+            <p>{{dono}} <b>{{usuarioLista}} ({{apelido}})</b></p>
+            <ul class="lista_filmes">
+                <li v-for='item in items'>
+                    <span class="movie-title">{{item.titulo}}</span><br>
+                    <span class="movie-description">{{item.descricao}}</span>
+                </li>
+            </ul>
+        </div>       
+    </template>
+
+    <div id="app">
+        <h1>{{tituloLista}}</h1>
+        <!-- kebab-case em HTML -->
+        <lista-filmes v-bind:usuario-lista = 'usuario' v-bind:apelido="apelido"></lista-filmes>
+    </div>
+</body>
+<script src="https://unpkg.com/vue@3"></script>
+<script src="script.js"></script>
+</html>

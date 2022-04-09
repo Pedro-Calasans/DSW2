@@ -1,0 +1,46 @@
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-left: 20px;
+}
+
+.input-movie{
+    width: 40%;
+    border-style: solid;
+    padding: 10px;
+    /* position: relative; */
+}
+
+.input-movie label {
+    display: inline-block;
+    width: 120px;
+    /* position: absolute;
+    left: 10px;
+    margin-top: 5px; */
+}
+
+.input-movie input {
+    margin: 5px 0px 5px 0px;
+    /* position: absolute;
+    left: 120px; */
+}
+
+.lista_filmes {
+    list-style: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.lista_filmes li::before{
+    content: "\274F";
+    color: brown;
+    font-weight: bold;
+}
+
+.movie-title{
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.movie-description{
+    font-size: small;
+    padding-left: 25px;
+}
